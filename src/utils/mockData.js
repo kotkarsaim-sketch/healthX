@@ -5,6 +5,9 @@ export const clinics = [
   { id: 'clinic-3', name: 'Sunrise Family Care', initials: 'SF', color: '#F59E0B', address: '789 Sunrise Rd, Downtown, TX 75001', phone: '+1 (555) 345-6789', email: 'hello@sunrisefamily.care', plan: 'basic', status: 'trial', joinedDate: '2026-06-20', trialEnd: '2026-07-20', monthlyFee: 49, patientsToday: 14, totalPatients: 420, parkingSpots: 20, parkingAvailable: 8, amenities: ['Free Wi-Fi','Wheelchair Access'], hours: { 'Monday - Friday': '8:30 AM – 5:30 PM', Saturday: '10:00 AM – 1:00 PM', Sunday: 'Closed' } },
 ];
 
+// Default clinic info for patient view
+export const clinicInfo = clinics[0];
+
 // ===== DOCTORS (per clinic) =====
 export const doctors = [
   { id: 'd1', clinicId: 'clinic-1', name: 'Dr. Sarah Mitchell', specialty: 'General Physician', department: 'General Medicine', experience: 12, rating: 4.8, avgConsultTime: 12, workingHours: '9:00 AM – 5:00 PM', status: 'available', patientsToday: 14, completedToday: 9 },
