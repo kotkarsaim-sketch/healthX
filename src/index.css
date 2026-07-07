@@ -315,6 +315,7 @@ select.input { appearance: none; background-image: url("data:image/svg+xml,%3Csv
   justify-content: center;
   overflow: hidden;
   background: #0a0f1e;
+  container-type: inline-size;
 }
 
 .hero-bg {
@@ -406,27 +407,42 @@ select.input { appearance: none; background-image: url("data:image/svg+xml,%3Csv
 }
 
 .hero-title {
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
 }
 
 .hero-title-serif {
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-family: 'Playfair Display', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
   font-style: italic;
-  font-weight: 400;
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  color: rgba(255, 255, 255, 0.75);
+  font-weight: 300;
+  font-size: 12cqi;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .hero-title-bold {
   font-family: var(--font);
-  font-weight: 900;
-  font-size: clamp(2.8rem, 9vw, 5.5rem);
+  font-weight: 700;
+  font-size: 12cqi;
   color: #ffffff;
-  background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #c8d6e5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Responsive font sizing for hero titles */
+@container (min-width: 640px) {
+  .hero-title-serif,
+  .hero-title-bold {
+    font-size: 8cqi;
+  }
+}
+
+@container (min-width: 1024px) {
+  .hero-title-serif,
+  .hero-title-bold {
+    font-size: 6cqi;
+  }
 }
 
 /* Description */
